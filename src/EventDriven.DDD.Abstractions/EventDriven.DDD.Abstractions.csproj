@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	
+  <PropertyGroup>
+	<TargetFramework>net6.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<Authors>Tony Sneed</Authors>
+	<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
+	<PackageVersion>1.0.0</PackageVersion>
+	<Description>Abstractions for implementing Domain Driven Design in .NET.</Description>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/event-driven-dotnet/EventDriven.DDD</PackageProjectUrl>
+	<PackageIcon>eda-logo.jpeg</PackageIcon>
+	<RepositoryUrl>https://github.com/event-driven-dotnet/EventDriven.DDD.git</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<PackageTags>ddd domain-driven-design event-driven event-driven-architecture</PackageTags>
+	<PackageReleaseNotes>https://github.com/event-driven-dotnet/EventDriven.DDD/releases/tag/v1.0.0</PackageReleaseNotes>
+	<PackageId>EventDriven.DDD.Abstractions</PackageId>
+	<GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\ReadMe.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\images\eda-logo.jpeg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Commands\" />
+    <Folder Include="Events\" />
+  </ItemGroup>
+
+</Project>
