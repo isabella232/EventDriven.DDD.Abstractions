@@ -12,7 +12,7 @@
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions</PackageProjectUrl>
 	<PackageIcon>eda-logo.jpeg</PackageIcon>
-	<RepositoryUrl>https://github.com/event-driven-dotnet/EventDriven.DDD.git</RepositoryUrl>
+	<RepositoryUrl>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions.git</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>ddd domain-driven-design event-driven event-driven-architecture</PackageTags>
 	<PackageReleaseNotes>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions/releases/tag/v1.1.0-beta1</PackageReleaseNotes>
