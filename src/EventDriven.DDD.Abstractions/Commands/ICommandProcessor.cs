@@ -5,7 +5,7 @@ namespace EventDriven.DDD.Abstractions.Commands;
 /// <summary>
 /// Processes a command by generating one or more domain events.
 /// </summary>
-/// <typeparam name="TCommand">The type of command</typeparam>
+/// <typeparam name="TCommand">Command type.</typeparam>
 public interface ICommandProcessor<in TCommand> where TCommand : class, ICommand
 {
     /// <summary>
