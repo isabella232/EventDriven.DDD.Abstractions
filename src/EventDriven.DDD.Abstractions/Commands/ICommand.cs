@@ -1,4 +1,6 @@
-﻿namespace EventDriven.DDD.Abstractions.Commands;
+﻿using EventDriven.DDD.Abstractions.Entities;
+
+namespace EventDriven.DDD.Abstractions.Commands;
 
 /// <summary>
 /// An object that is sent to the domain for a state change which is handled by a command handler.
@@ -9,4 +11,9 @@ public interface ICommand
     /// Represents the ID of the entity the command is in reference to.
     /// </summary>
     Guid EntityId { get; }
+
+    /// <summary>
+    /// The entity the command is in reference to.
+    /// </summary>
+    public IEntity? Entity { get; }
 }

@@ -3,7 +3,7 @@
 /// <summary>
 /// Applies an event by muting entity state.
 /// </summary>
-/// <typeparam name="TEvent">The type of event.</typeparam>
+/// <typeparam name="TEvent">Event type.</typeparam>
 public interface IEventApplier<in TEvent> where TEvent : class, IDomainEvent
 {
     /// <summary>
