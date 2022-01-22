@@ -7,7 +7,7 @@
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Authors>Tony Sneed</Authors>
 	<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
-	<PackageVersion>1.1.0-beta1</PackageVersion>
+	<PackageVersion>1.1.0-beta2</PackageVersion>
 	<Description>Abstractions for implementing Domain Driven Design in .NET.</Description>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageProjectUrl>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions</PackageProjectUrl>
@@ -15,7 +15,7 @@
 	<RepositoryUrl>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions.git</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageTags>ddd domain-driven-design event-driven event-driven-architecture</PackageTags>
-	<PackageReleaseNotes>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions/releases/tag/v1.1.0-beta1</PackageReleaseNotes>
+	<PackageReleaseNotes>https://github.com/event-driven-dotnet/EventDriven.DDD.Abstractions/releases/tag/v1.1.0-beta2</PackageReleaseNotes>
 	<PackageId>EventDriven.DDD.Abstractions</PackageId>
 	<GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>

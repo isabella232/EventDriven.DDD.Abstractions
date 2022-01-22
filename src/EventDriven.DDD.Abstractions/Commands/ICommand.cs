@@ -11,9 +11,14 @@ public interface ICommand
     /// Represents the ID of the entity the command is in reference to.
     /// </summary>
     Guid EntityId { get; }
+}
 
+/// <inheritdoc />
+public interface ICommand<out TEntity> : ICommand
+    where TEntity : IEntity
+{
     /// <summary>
     /// The entity the command is in reference to.
     /// </summary>
-    public IEntity? Entity { get; }
+    public TEntity Entity { get; }
 }
