@@ -15,9 +15,4 @@ public interface IEntity
     /// to its underlying storage medium.
     /// </summary>
     string ETag { get; set; }
-
-    /// <summary>
-    /// The sequence number (equal to the highest event sequence number applied).
-    /// </summary>
-    long SequenceNumber { get; set; }
 }

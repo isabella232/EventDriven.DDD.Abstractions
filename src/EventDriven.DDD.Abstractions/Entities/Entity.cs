@@ -8,7 +8,4 @@ public abstract class Entity : IEntity
 
     /// <inheritdoc />
     public string ETag { get; set; } = null!;
-
-    /// <inheritdoc />
-    public long SequenceNumber { get; set; }
 }
