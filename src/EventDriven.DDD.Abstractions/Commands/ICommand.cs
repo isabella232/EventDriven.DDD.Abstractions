@@ -1,24 +1,16 @@
-﻿using EventDriven.DDD.Abstractions.Entities;
+using EventDriven.DDD.Abstractions.Entities;
+using MediatR;
 
 namespace EventDriven.DDD.Abstractions.Commands;
 
 /// <summary>
 /// An object that is sent to the domain for a state change which is handled by a command handler.
 /// </summary>
-public interface ICommand
-{
-    /// <summary>
-    /// Represents the ID of the entity the command is in reference to.
-    /// </summary>
-    Guid EntityId { get; }
-}
-
-/// <inheritdoc />
-public interface ICommand<out TEntity> : ICommand
-    where TEntity : IEntity
-{
-    /// <summary>
-    /// The entity the command is in reference to.
-    /// </summary>
-    public TEntity Entity { get; }
-}
+public interface ICommand : ICommandBase, IRequest<CommandResult> { }
+    
+/// <summary>
+/// An object that is sent to the domain for a state change which is handled by a command handler.
+/// </summary>
+/// <typeparam name="TEntity">Entity type.</typeparam>
+public interface ICommand<TEntity> : ICommandBase<TEntity>, IRequest<CommandResult<TEntity>>
+    where TEntity : Entity { }

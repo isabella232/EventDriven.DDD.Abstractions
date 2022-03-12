@@ -1,4 +1,5 @@
-﻿using EventDriven.DDD.Abstractions.Entities;
+using EventDriven.DDD.Abstractions.Entities;
+using MediatR;
 
 namespace EventDriven.DDD.Abstractions.Commands;
 
@@ -6,30 +7,16 @@ namespace EventDriven.DDD.Abstractions.Commands;
 /// Command handler.
 /// </summary>
 /// <typeparam name="TCommand">Command type.</typeparam>
-public interface ICommandHandler<in TCommand>
-    where TCommand : class, ICommand
-{
-    /// <summary>
-    /// Handles a command.
-    /// </summary>
-    /// <param name="command">The command.</param>
-    /// <returns>The command result.</returns>
-    Task<CommandResult> Handle(TCommand command);
-}
+public interface ICommandHandler<in TCommand> :
+    IRequestHandler<TCommand, CommandResult>
+    where TCommand : class, ICommand { }
 
 /// <summary>
 /// Command handler.
 /// </summary>
-/// <typeparam name="TEntity">Entity type.</typeparam>
 /// <typeparam name="TCommand">Command type.</typeparam>
-public interface ICommandHandler<TEntity, in TCommand>
+/// <typeparam name="TEntity">Entity type.</typeparam>
+public interface ICommandHandler<TEntity, in TCommand> :
+    IRequestHandler<TCommand, CommandResult<TEntity>>
     where TEntity : Entity
-    where TCommand : class, ICommand
-{
-    /// <summary>
-    /// Handles a command.
-    /// </summary>
-    /// <param name="command">The command.</param>
-    /// <returns>The command result.</returns>
-    Task<CommandResult<TEntity>> Handle(TCommand command);
-}
+    where TCommand : class, ICommand<TEntity> { }
