@@ -1,4 +1,4 @@
-﻿using EventDriven.DDD.Abstractions.Entities;
+using EventDriven.DDD.Abstractions.Entities;
 
 namespace EventDriven.DDD.Abstractions.Commands;
 
@@ -12,7 +12,7 @@ public abstract record Command(Guid EntityId = default) : ICommand;
 /// </summary>
 /// <typeparam name="TEntity">Entity type.</typeparam>
 public abstract record Command<TEntity>(TEntity Entity) : ICommand<TEntity>
-    where TEntity : IEntity
+    where TEntity : Entity
 {
     /// <inheritdoc />
     public Guid EntityId { get; } = Entity.Id;
