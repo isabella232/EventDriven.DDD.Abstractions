@@ -26,5 +26,5 @@ public interface IDomainEvent<out TEntity> : IDomainEvent
     /// <summary>
     /// The entity the domain event is in reference to.
     /// </summary>
-    public TEntity Entity { get; }
+    public TEntity? Entity { get; }
 }

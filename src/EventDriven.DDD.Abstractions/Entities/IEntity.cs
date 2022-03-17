@@ -14,5 +14,5 @@ public interface IEntity
     /// Represents a unique ID that must change atomically with each store of the entity
     /// to its underlying storage medium.
     /// </summary>
-    string ETag { get; set; }
+    string? ETag { get; set; }
 }

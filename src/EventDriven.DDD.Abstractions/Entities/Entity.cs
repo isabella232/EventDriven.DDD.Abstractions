@@ -7,5 +7,5 @@ public abstract class Entity : IEntity
     public Guid Id { get; set; }
 
     /// <inheritdoc />
-    public string ETag { get; set; } = null!;
+    public string? ETag { get; set; }
 }
